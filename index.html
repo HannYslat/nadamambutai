@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Profesional</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Inter & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#faf5ff',
+                            100: '#f3e8ff',
+                            500: '#a855f7',
+                            600: '#9333ea',
+                            700: '#7e22ce',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar and animations */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a855f7;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #c084fc 0%, #818cf8 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #9333ea 0%, #6366f1 100%);
+        }
+        .gradient-bg-hover:hover {
+            background: linear-gradient(135deg, #7e22ce 0%, #4f46e5 100%);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-purple-600 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-purple-950/60 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="#hero" class="text-xl font-bold tracking-wider gradient-text">
+                    &lt;NadaPortofolio /&gt;
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#tentang" class="hover:text-purple-400 transition-colors">Tentang Saya</a>
+                    <a href="#pendidikan" class="hover:text-purple-400 transition-colors">Pendidikan</a>
+                    <a href="#keahlian" class="hover:text-purple-400 transition-colors">Keahlian</a>
+                    <a href="#proyek" class="hover:text-purple-400 transition-colors">Praktik & Proyek</a>
+                    <a href="#organisasi" class="hover:text-purple-400 transition-colors">Organisasi</a>
+                    <a href="#kontak" class="hover:text-purple-400 transition-colors">Kontak</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="#kontak" class="gradient-bg text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-all transform hover:-translate-y-0.5 shadow-lg shadow-purple-600/25">
+                        Hubungi Saya
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-purple-900/50 px-4 pt-2 pb-4 space-y-3">
+            <a href="#tentang" class="block text-slate-300 hover:text-purple-400 font-medium py-1">Tentang Saya</a>
+            <a href="#pendidikan" class="block text-slate-300 hover:text-purple-400 font-medium py-1">Pendidikan</a>
+            <a href="#keahlian" class="block text-slate-300 hover:text-purple-400 font-medium py-1">Keahlian</a>
+            <a href="#proyek" class="block text-slate-300 hover:text-purple-400 font-medium py-1">Praktik & Proyek</a>
+            <a href="#organisasi" class="block text-slate-300 hover:text-purple-400 font-medium py-1">Organisasi</a>
+            <a href="#kontak" class="block text-slate-300 hover:text-purple-400 font-medium py-1">Kontak</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-28 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-center md:text-left">
+                <div class="inline-block px-3.5 py-1.5 bg-purple-950/80 text-purple-300 rounded-full text-xs font-semibold uppercase tracking-wider border border-purple-700/40">
+                    Selamat Datang di Portofolio Saya
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+                    Halo, Saya <br/>
+                    <span class="gradient-text">Nada Awalliya Melati</span>
+                </h1>
+                <p class="text-slate-400 text-lg sm:text-xl max-w-lg mx-auto md:mx-0 leading-relaxed">
+                    Siswi <span class="text-slate-200 font-semibold">Teknik Komputer & Jaringan (TKJ)</span> SMK Ma'arif NU Tirto yang berminat tinggi di bidang TI & Jaringan Komputer.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
+                    <a href="#proyek" class="w-full sm:w-auto text-center gradient-bg text-white px-6 py-3 rounded-xl font-medium shadow-lg shadow-purple-600/30 hover:opacity-90 transition-all transform hover:-translate-y-0.5">
+                        Lihat Praktik & Proyek <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#kontak" class="w-full sm:w-auto text-center bg-slate-900 border border-purple-900/50 text-slate-200 hover:bg-purple-950/50 px-6 py-3 rounded-xl font-medium transition-all">
+                        Kontak Saya
+                    </a>
+                </div>
+                <!-- Highlight Prestasi -->
+                <div class="pt-2">
+                    <div class="inline-flex items-center space-x-2.5 bg-purple-900/30 border border-purple-500/30 text-purple-200 text-xs sm:text-sm px-4 py-2.5 rounded-xl backdrop-blur-sm">
+                        <i class="fa-solid fa-trophy text-amber-400 text-base"></i>
+                        <span>Peringkat 2 Nilai Tertinggi Program TOEIC di SMK Ma'arif NU Tirto</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Avatar / Illustration -->
+            <div class="flex justify-center">
+                <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full p-2 bg-gradient-to-tr from-purple-600 via-indigo-500 to-pink-500 shadow-2xl shadow-purple-600/30">
+                    <img 
+                        src="https://placehold.co/400x400/1e1b4b/c084fc?text=Nada+Awalliya" 
+                        alt="Nada Awalliya Melati" 
+                        class="w-full h-full object-cover rounded-full bg-slate-900"
+                        onerror="this.src='https://via.placeholder.com/400'"
+                    />
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-2 -right-2 bg-slate-900 border border-purple-800/60 p-3 rounded-xl shadow-lg flex items-center space-x-3">
+                        <div class="w-3 h-3 bg-purple-500 rounded-full animate-pulse"></div>
+                        <span class="text-xs font-semibold text-purple-200">TKJ Student</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="tentang" class="py-20 bg-slate-900/60 border-y border-purple-950/40">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Tentang Saya</h2>
+                <div class="w-16 h-1 gradient-bg mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="bg-slate-900/90 border border-purple-900/40 p-6 sm:p-8 rounded-2xl mb-12 max-w-4xl mx-auto shadow-xl">
+                <p class="text-slate-300 text-base sm:text-lg leading-relaxed text-center">
+                    Saya merupakan siswi SMK Ma'arif NU Tirto jurusan Teknik Komputer dan Jaringan (TKJ) yang memiliki minat di bidang teknologi informasi dan jaringan komputer. Saya memiliki pengalaman praktik dalam pembuatan website, pemasangan dan konfigurasi Wi-Fi, serta pemasaran layanan internet. Saya adalah pribadi yang bertanggung jawab, disiplin, mampu bekerja sama dalam tim, dan memiliki kemauan tinggi untuk terus belajar serta mengembangkan keterampilan.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-900 border border-purple-900/30 p-6 rounded-2xl hover:border-purple-600/50 transition-all hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-purple-950/80 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-4 border border-purple-800/50">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-purple-100">Jaringan & Wi-Fi</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Pengalaman praktik dalam instalasi, konfigurasi Wi-Fi & router, serta pemahaman penyambungan kabel fiber optik & kabel jaringan.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 border border-purple-900/30 p-6 rounded-2xl hover:border-purple-600/50 transition-all hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-purple-950/80 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-4 border border-purple-800/50">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-purple-100">Web Development</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Mampu membuat dan merancang struktur website sederhana menggunakan dasar-dasar HTML dan CSS.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 border border-purple-900/30 p-6 rounded-2xl hover:border-purple-600/50 transition-all hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-purple-950/80 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-4 border border-purple-800/50">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-purple-100">Organisasi & Kepemimpinan</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Memiliki jiwa kepemimpinan, komunikasi yang baik, serta pengalaman menjadi Wakil Ketua PMR & Utusan FORPIS Pekalongan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="pendidikan" class="py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Riwayat Pendidikan</h2>
+            <div class="w-16 h-1 gradient-bg mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-slate-900 border border-purple-900/40 p-6 rounded-2xl shadow-lg flex items-start space-x-4 hover:border-purple-600/40 transition-all">
+                <div class="w-12 h-12 bg-purple-950/80 text-purple-300 rounded-xl flex items-center justify-center text-xl shrink-0 border border-purple-800/50">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div>
+                    <span class="text-xs font-semibold text-purple-400">2024 - 2027</span>
+                    <h3 class="text-lg font-bold text-white mt-1">SMK Ma'arif NU Tirto</h3>
+                    <p class="text-sm text-slate-300">Teknik Komputer dan Jaringan (TKJ)</p>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow flex items-start space-x-4 hover:border-purple-900/40 transition-all">
+                <div class="w-12 h-12 bg-slate-800 text-slate-400 rounded-xl flex items-center justify-center text-xl shrink-0 border border-slate-700">
+                    <i class="fa-solid fa-school"></i>
+                </div>
+                <div>
+                    <span class="text-xs font-semibold text-emerald-400">Lulus</span>
+                    <h3 class="text-lg font-bold text-white mt-1">MTs Salafiyah NU Karanganyar</h3>
+                    <p class="text-sm text-slate-300">Pendidikan Menengah Pertama</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="keahlian" class="py-20 bg-slate-900/60 border-y border-purple-950/40">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Keahlian & Keterampilan</h2>
+                <div class="w-16 h-1 gradient-bg mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Technical Skills -->
+                <div class="bg-slate-900 border border-purple-900/30 p-6 rounded-2xl shadow-xl">
+                    <h3 class="text-xl font-bold text-purple-300 mb-6 flex items-center">
+                        <i class="fa-solid fa-laptop-code mr-3 text-purple-400"></i> Keterampilan Teknikal (TKJ)
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-slate-950/60 border border-purple-900/30 rounded-xl p-4 flex items-center space-x-3">
+                            <i class="fa-solid fa-wifi text-2xl text-purple-400"></i>
+                            <div>
+                                <h4 class="font-semibold text-sm">Wi-Fi & Router</h4>
+                                <span class="text-xs text-slate-400">Instalasi & Konfigurasi</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-950/60 border border-purple-900/30 rounded-xl p-4 flex items-center space-x-3">
+                            <i class="fa-solid fa-cable-car text-2xl text-indigo-400"></i>
+                            <div>
+                                <h4 class="font-semibold text-sm">Fiber Optik & Jaringan</h4>
+                                <span class="text-xs text-slate-400">Penyambungan Kabel</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-950/60 border border-purple-900/30 rounded-xl p-4 flex items-center space-x-3">
+                            <i class="fa-brands fa-html5 text-2xl text-pink-400"></i>
+                            <div>
+                                <h4 class="font-semibold text-sm">HTML & CSS</h4>
+                                <span class="text-xs text-slate-400">Pembuatan Website</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-950/60 border border-purple-900/30 rounded-xl p-4 flex items-center space-x-3">
+                            <i class="fa-solid fa-desktop text-2xl text-violet-400"></i>
+                            <div>
+                                <h4 class="font-semibold text-sm">Perakitan PC</h4>
+                                <span class="text-xs text-slate-400">Hardware Komputer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Skills -->
+                <div class="bg-slate-900 border border-purple-900/30 p-6 rounded-2xl shadow-xl">
+                    <h3 class="text-xl font-bold text-purple-300 mb-6 flex items-center">
+                        <i class="fa-solid fa-user-check mr-3 text-purple-400"></i> Keterampilan Personal
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-slate-950/60 border border-purple-900/30 rounded-xl p-4 flex items-center space-x-3">
+                            <i class="fa-solid fa-comments text-2xl text-purple-400"></i>
+                            <div>
+                                <h4 class="font-semibold text-sm">Komunikasi</h4>
+                                <span class="text-xs text-slate-400">& Kerja Sama Tim</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-950/60 border border-purple-900/30 rounded-xl p-4 flex items-center space-x-3">
+                            <i class="fa-solid fa-clock text-2xl text-pink-400"></i>
+                            <div>
+                                <h4 class="font-semibold text-sm">Disiplin</h4>
+                                <span class="text-xs text-slate-400">& Tanggung Jawab</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-950/60 border border-purple-900/30 rounded-xl p-4 flex items-center space-x-3">
+                            <i class="fa-solid fa-brain text-2xl text-fuchsia-400"></i>
+                            <div>
+                                <h4 class="font-semibold text-sm">Teliti & Cepat Belajar</h4>
+                                <span class="text-xs text-slate-400">Pengembangan Diri</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-950/60 border border-purple-900/30 rounded-xl p-4 flex items-center space-x-3">
+                            <i class="fa-solid fa-arrows-rotate text-2xl text-indigo-400"></i>
+                            <div>
+                                <h4 class="font-semibold text-sm">Mampu Beradaptasi</h4>
+                                <span class="text-xs text-slate-400">Fleksibel dalam Kerja</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Projects & Practice Section -->
+    <section id="proyek" class="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Proyek Akademik & Praktik Sekolah</h2>
+            <p class="text-slate-400 mt-2">Praktik Keahlian Teknik Komputer & Jaringan di SMK Ma'arif NU Tirto</p>
+            <div class
